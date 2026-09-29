@@ -53,7 +53,7 @@ Not an AI mistake, but worth recording: I ran `seed_data` before `migrate` and g
 - **Manual:** ran `migrate`, `seed_data` and `runserver`, then `curl.exe -i http://127.0.0.1:8000/api/orders/ORD-1001/recommend-box/` and got HTTP 200 with the "Small" box and three placements (mug and two books), which is correct by hand: they fit inside 25x20x10 cm and weigh 1.3 kg against a 2 kg limit.
 - **URL routing:** checked with `resolve('/api/orders/ORD-1001/recommend-box/')`, which returned `recommend_for_order`.
 - **Environment:** reproduced and fixed the failure by moving from the global Python to a clean virtual environment.
-- TODO(me): list any extra checks I do (oversized items, 20 mugs, changed box limits in `/admin/`, code I read line by line).
+
 
 ## 7. What I did not use AI for
 `CHAT_TRANSCRIPT.md` is my own export and `LEARNINGS.md` is written entirely by me.
